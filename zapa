@@ -3,61 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Zapatillas</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-    header { background: white; text-align: center; padding: 20px; font-size: 24px; font-weight: bold; }
-    .container { max-width: 1000px; margin: auto; padding: 20px; display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
-    .card { background: white; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .card img { width: 200px; border-radius: 8px; }
-    .card h2 { margin: 10px 0; font-size: 18px; }
-    .card p { color: gray; }
-    select { width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 5px; }
-    footer { text-align: center; background: white; padding: 10px; margin-top: 20px; color: gray; font-size: 14px; }
-  </style>
+  <title>Zapatillas Premium</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>Reventa de Zapatillas</header>
-  <main class="container">
-    
-    <!-- Producto 1 -->
-    <div class="card">
-      <img src="https://images.stockx.com/images/Air-Jordan-4-Retro-White-Oreo-2021-Product.jpg" alt="Jordan Retro 4">
-      <h2>Jordan Retro 4</h2>
-      <p>Precio: ______</p>
-      <label>Talla:</label>
-      <select>
-        <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
-      </select>
+  <header>
+    <div class="hero">
+      <img src="assets/jordan4.jpg" alt="Jordan Retro 4" class="hero-image">
     </div>
+  </header>
 
-    <!-- Producto 2 -->
-    <div class="card">
-      <img src="https://images.stockx.com/images/Nike-Dunk-Low-Black-White-2021-Product.jpg" alt="Panda">
-      <h2>Nike Dunk Low Panda</h2>
-      <p>Precio: ______</p>
-      <label>Talla:</label>
-      <select>
-        <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
-      </select>
+  <main>
+    <h1 class="title">Nuestra Colección</h1>
+    <div class="grid-container" id="product-grid">
+      <!-- Productos se cargarán aquí con JavaScript -->
     </div>
+  </main>
 
-    <!-- Producto 3 -->
-    <div class="card">
-      <img src="https://images.stockx.com/images/Air-Jordan-3-Retro-White-Cement-Reimagined-Product.jpg" alt="Jordan Retro 3">
-      <h2>Jordan Retro 3</h2>
-      <p>Precio: ______</p>
-      <label>Talla:</label>
-      <select>
-        <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
-      </select>
+  <!-- Modal para detalles -->
+  <div class="modal" id="product-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-image" src="" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div class="size-selector">
+        <label for="size">Talla:</label>
+        <select id="size">
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+        </select>
+      </div>
+      <button class="buy-btn">Añadir al carrito</button>
     </div>
+  </div>
 
-    <!-- Producto 4 -->
-    <div class="card">
-      <img src="https://images.stockx.com/images/adidas-Campus-00s-Grey-White-Product.jpg" alt="Campus">
-      <h2>Adidas Campus</h2>
-      <p>Precio: ______</p>
-      <label>Talla:</label>
-      <select>
-        <option>38</option><option>
+  <script src="script.js"></script>
+</body>
+</html>
