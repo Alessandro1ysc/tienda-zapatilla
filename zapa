@@ -4,84 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Zapatillas</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    header { background: white; text-align: center; padding: 20px; font-size: 24px; font-weight: bold; }
+    .container { max-width: 1000px; margin: auto; padding: 20px; display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .card { background: white; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .card img { width: 200px; border-radius: 8px; }
+    .card h2 { margin: 10px 0; font-size: 18px; }
+    .card p { color: gray; }
+    select { width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 5px; }
+    footer { text-align: center; background: white; padding: 10px; margin-top: 20px; color: gray; font-size: 14px; }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow-md p-4 text-center">
-    <h1 class="text-2xl font-bold text-gray-800">Reventa de Zapatillas</h1>
-  </header>
-
-  <!-- Contenedor -->
-  <main class="max-w-6xl mx-auto p-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      
-      <!-- Producto 1 -->
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center">
-        <img src="https://images.stockx.com/images/Air-Jordan-4-Retro-White-Oreo-2021-Product.jpg" alt="Jordan Retro 4" class="rounded-xl mb-4 w-60">
-        <h2 class="text-lg font-semibold">Jordan Retro 4</h2>
-        <p class="text-gray-500 mb-2">Precio: ______</p>
-        <label class="text-sm mb-1">Talla:</label>
-        <select class="border border-gray-300 rounded-md px-2 py-1 w-full">
-          <option>38</option>
-          <option>39</option>
-          <option>40</option>
-          <option>41</option>
-          <option>42</option>
-        </select>
-      </div>
-
-      <!-- Producto 2 -->
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center">
-        <img src="https://images.stockx.com/images/Nike-Dunk-Low-Black-White-2021-Product.jpg" alt="Panda" class="rounded-xl mb-4 w-60">
-        <h2 class="text-lg font-semibold">Nike Dunk Low Panda</h2>
-        <p class="text-gray-500 mb-2">Precio: ______</p>
-        <label class="text-sm mb-1">Talla:</label>
-        <select class="border border-gray-300 rounded-md px-2 py-1 w-full">
-          <option>38</option>
-          <option>39</option>
-          <option>40</option>
-          <option>41</option>
-          <option>42</option>
-        </select>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center">
-        <img src="https://images.stockx.com/images/Air-Jordan-3-Retro-White-Cement-Reimagined-Product.jpg" alt="Jordan Retro 3" class="rounded-xl mb-4 w-60">
-        <h2 class="text-lg font-semibold">Jordan Retro 3</h2>
-        <p class="text-gray-500 mb-2">Precio: ______</p>
-        <label class="text-sm mb-1">Talla:</label>
-        <select class="border border-gray-300 rounded-md px-2 py-1 w-full">
-          <option>38</option>
-          <option>39</option>
-          <option>40</option>
-          <option>41</option>
-          <option>42</option>
-        </select>
-      </div>
-
-      <!-- Producto 4 -->
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center">
-        <img src="https://images.stockx.com/images/adidas-Campus-00s-Grey-White-Product.jpg" alt="Campus" class="rounded-xl mb-4 w-60">
-        <h2 class="text-lg font-semibold">Adidas Campus</h2>
-        <p class="text-gray-500 mb-2">Precio: ______</p>
-        <label class="text-sm mb-1">Talla:</label>
-        <select class="border border-gray-300 rounded-md px-2 py-1 w-full">
-          <option>38</option>
-          <option>39</option>
-          <option>40</option>
-          <option>41</option>
-          <option>42</option>
-        </select>
-      </div>
-
+<body>
+  <header>Reventa de Zapatillas</header>
+  <main class="container">
+    
+    <!-- Producto 1 -->
+    <div class="card">
+      <img src="https://images.stockx.com/images/Air-Jordan-4-Retro-White-Oreo-2021-Product.jpg" alt="Jordan Retro 4">
+      <h2>Jordan Retro 4</h2>
+      <p>Precio: ______</p>
+      <label>Talla:</label>
+      <select>
+        <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+      </select>
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-white text-center p-4 mt-6 text-gray-600 text-sm">
-    &copy; 2025 Tu Tienda. Todos los derechos reservados.
-  </footer>
-</body>
-</html>
+    <!-- Producto 2 -->
+    <div class="card">
+      <img src="https://images.stockx.com/images/Nike-Dunk-Low-Black-White-2021-Product.jpg" alt="Panda">
+      <h2>Nike Dunk Low Panda</h2>
+      <p>Precio: ______</p>
+      <label>Talla:</label>
+      <select>
+        <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+      </select>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="card">
+      <img src="https://images.stockx.com/images/Air-Jordan-3-Retro-White-Cement-Reimagined-Product.jpg" alt="Jordan Retro 3">
+      <h2>Jordan Retro 3</h2>
+      <p>Precio: ______</p>
+      <label>Talla:</label>
+      <select>
+        <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+      </select>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="card">
+      <img src="https://images.stockx.com/images/adidas-Campus-00s-Grey-White-Product.jpg" alt="Campus">
+      <h2>Adidas Campus</h2>
+      <p>Precio: ______</p>
+      <label>Talla:</label>
+      <select>
+        <option>38</option><option>
